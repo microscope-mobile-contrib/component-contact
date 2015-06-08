@@ -20,7 +20,7 @@ function ContactsService($q) {
 }
 
 /**
-* take pickContact
+* pickContact
 * @return {[type]}
 */
 ContactsService.prototype.pickContact = function () {
@@ -39,7 +39,6 @@ ContactsService.prototype.pickContact = function () {
     }
 
     return deferred.promise;
-
 
 };
 

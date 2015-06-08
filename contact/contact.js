@@ -8,6 +8,13 @@ var ContactsService  = require('./services/contactsService');
 
 // Camera sub-module definition
 var contact = angular.module('app.contact', []);
+
+contact.services('ContactsService', [
+	'$q',
+	ContactsService
+]);
+
+
 contact.controller('ContactCtrl', [
 	'ContactsService',
 	ContactCtrl
