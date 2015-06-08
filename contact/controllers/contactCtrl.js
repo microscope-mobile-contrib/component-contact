@@ -4,9 +4,11 @@
 var _contactsService;
 
 // Contact controller class
-function ContactCtrl (ContactService) {
+function ContactCtrl (ContactsService) {
+
+    console.log("test log !!!!!!!!!!!!!");
    
-    _contactsService = ContactService;
+    _contactsService = ContactsService;
 	 
     this.data = {
         selectedContacts : []
@@ -20,7 +22,7 @@ function ContactCtrl (ContactService) {
 ContactCtrl.prototype.pickContact = function () {
 	var self = this;
 	  
-	ContactCtrl.pickContact().then(
+	_contactsService.pickContact().then(
                 function(contact) {
                     self.data.selectedContacts.push(contact);
                     console.log("Selected contacts=");

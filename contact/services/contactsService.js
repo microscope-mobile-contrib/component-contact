@@ -8,7 +8,7 @@ function ContactsService($q) {
 
     _$q = $q;
 
-    function formatContact(contact) {
+    this.formatContact = function(contact) {
 
         return {
             "displayName": contact.name.formatted || contact.name.givenName + " " + contact.name.familyName || "Mystery Person",
@@ -20,7 +20,7 @@ function ContactsService($q) {
 }
 
 /**
-* pickContact
+* take pickContact
 * @return {[type]}
 */
 ContactsService.prototype.pickContact = function () {
@@ -39,6 +39,7 @@ ContactsService.prototype.pickContact = function () {
     }
 
     return deferred.promise;
+
 
 };
 
